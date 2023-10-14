@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roxy Cinemas</title>
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+
+        }
+        .navbar{
+           background-color: rgb(0, 0, 0);
+        }
+        .navbar ul{
+            display: flex;
+            flex-direction: row;
+        }
+        .navbar ul li{
+            
+            padding: 20px;
+        }
+        .navbar ul li a{
+            text-decoration: none;
+            color: rgb(246, 195, 8);
+            filter: brightness(80%);
+            margin: 23px 34px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            opacity: 0.8;
+  
+        }
+        .navbar ul li a:hover{
+            color: aliceblue;
+            transition: all 0.7s;
+        }
+        .search{
+            margin: 19px 390px 0px 30px;
+            width: 100px;
+            position: relative;
+            left: 230px;
+        }
+        
+        input[type= 'text']:hover{
+            background-color: rgb(236, 198, 100);
+            transition: all 2s;
+        }
+
+        li .search{
+            margin: 80px 80px 0px 290px;
+            
+        }
+        input[type= 'text']{
+            border: none;
+            padding: 5px;
+            border-radius: 30px;
+            text-align: center;
+            background-color: rgb(240, 225, 187);
+            font-weight: 300;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        .home{
+            height: 440px;
+            border: 2px solid black;
+            background-image: url('https://www.harpersbazaararabia.com/cloud/2021/09/11/roxy-1.jpg');
+            filter: brightness(70%);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .homeheading{
+            margin-top: 77px;
+            margin-left: 25px;
+            width: 500px;
+        }
+        .homepara{
+            margin-top: 29px;
+            margin-bottom: 10px;
+            margin-left: 17px ;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 550px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+        .homeheading{
+            color:rgb(249, 205, 9);
+            font-size: 26px;
+        }
+        .but{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+          
+            width: 650px;
+        }
+        .but button{
+            float: left;
+            margin: 13px 0px 0px;
+            padding: 11px;
+            border-radius: 20px;
+            color:rgb(243, 168, 29) ;
+            background-color: rgb(255, 255, 255);
+            border: none;
+            width: 100px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+            font-size: 14px;
+            transition: all 1.3s;
+        }
+        .but1{
+            margin: 0px 0px 0px;
+        }
+        .but2{
+            margin: 0px 88px;
+        }
+        .but button:hover{
+            cursor: pointer;
+            color:goldenrod;
+            background-color: rgb(0, 0, 0);
+            opacity: 0.8;
+            transform:scale(1.1);
+        }
+        .now{
+            background-image: url('https://img.freepik.com/free-vector/abstract-premium-black-gold-geometric-background_1017-24783.jpg');
+            filter: brightness(80%);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .nowheading{
+            margin-top: 0px;
+            margin-left:0px;
+            padding: 15px;
+            font-size: 1.7rem;
+            color:    rgb(249, 205, 9)  ;
+            opacity: 0.7;
+            text-align: center;
+            text-shadow: 0px 0px 5px #ffffff;
+        }
+        .film{
+            display: flex;
+            flex-direction: row;
+            height: 400px;
+            margin: 10px;
+        }
+        .film1{
+            border-radius: 10px;
+            margin: 13px 54px 13px 3px;
+            width: 250px;
+            background-image: url('https://i.redd.it/85h1hzqxmmob1.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            transition: all 1s;
+        }
+        
+        
+        
+        .film2{
+            border-radius: 10px;
+            margin: 13px 54px 13px 3px;
+            width: 250px;
+            background-image: url('https://m.media-amazon.com/images/M/MV5BODEzYzE1MTgtYmJjMC00ODg1LWIxYjAtMjBhOTFmODljYTU0XkEyXkFqcGdeQXVyMTUyNjIwMDEw._V1_.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            transition: all 1s;
+        }
+        .film3{
+            border-radius: 10px;
+            margin: 13px 54px 13px 3px;
+            width: 250px;
+            background-image: url('https://pbs.twimg.com/media/FWFU6sIUAAA6WKx.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            transition: all 1s;
+        }
+        .film4{
+            border-radius: 10px;
+            margin: 13px 54px 13px 3px;
+            width: 250px;
+            background-image: url('https://m.media-amazon.com/images/M/MV5BMWQxYzVjNGQtYTNiZC00OWViLWFiNDktYzNhZWM5YjRmZWNhXkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            transition: all 1s;
+        }
+        .film1:hover{
+            cursor: pointer;
+            transform: scale(1.05);
+            box-shadow: 0 0 29px #e1ab18;
+        }
+        .film2:hover{
+            cursor: pointer;
+            transform: scale(1.05);
+            box-shadow: 0 0 29px #e1ab18;
+        }
+        .film3:hover{
+            cursor: pointer;
+            transform: scale(1.05);
+            box-shadow: 0 0 29px #e1ab18;
+        }
+        .film4:hover{
+            cursor: pointer;
+            transform: scale(1.05);
+            box-shadow: 0 0 29px #e1ab18;
+        }
+        .filmnames{
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .filmnames ul{
+            display: flex;
+            flex-direction: row;
+            width: 2000px;
+        }
+        .filmnames ul li{
+            list-style: none;
+            margin-top: 0px;
+        }
+        .filmnames ul li a{
+            text-decoration: none;
+            margin: 0px 104px 0px 74px;
+            font-weight: 300;
+            font-size: 1.2rem;
+            color: rgb(243, 181, 25);
+        }
+        .filmnames li:nth-child(1){
+            position: relative;
+            left: 10px;
+            bottom: 12px;
+        }
+        .filmnames li:nth-child(2){
+            position: relative;
+            left: 40px;
+            bottom: 12px;
+        }
+        .filmnames li:nth-child(3){
+            position: relative;
+            left: 88px;
+            bottom: 12px;
+        }
+        .filmnames li:nth-child(4){
+            position: relative;
+            left: 130px;
+            bottom: 12px;
+        }
+        .upcoming{
+            margin: 0px;
+            margin-bottom: 0px;
+            padding: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('https://media.istockphoto.com/id/1272315126/photo/abstract-gold-swir.jpg?b=1&s=612x612&w=0&k=20&c=iq3cHy5PBEuSD_nQqIfjOIic45K4l_JMdR1II3AiDVs=');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            filter: brightness(90%);
+        }
+        .upheading{
+            margin-top: 0px;
+            margin-left: 30px;
+            padding: 15px;
+            font-size: 1.7rem;
+            color:rgb(249, 205, 9)  ;
+            opacity: 0.7;
+            text-align: center;
+            text-shadow: 0px 0px 5px #fff9f9;
+        }
+        .upfilm{
+            display: flex;
+            flex-direction: row;
+            height: 400px;
+            margin: 10px;
+        }
+        .upfilm1{
+            border-radius: 10px;
+            margin: 13px 54px 13px 3px;
+            width: 250px;
+            background-image: url('https://www.cinejosh.com/newsimg/newsmainimg/latest-poster-of-salman-tiger-3_b_1110230855.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            transition: all 1s;
+        }
+        
+        
+        
+        .upfilm2{
+            border-radius: 10px;
+            margin: 13px 54px 13px 3px;
+            width: 250px;
+            background-image: url('https://img.republicworld.com/republic-prod/stories/images/16950133506507d9e65483c.jpeg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            transition: all 1s;
+        }
+        .upfilm3{
+            border-radius: 10px;
+            margin: 13px 54px 13px 3px;
+            width: 250px;
+            background-image: url('https://static.india.com/wp-content/uploads/2023/10/Untitled-7-2.jpg?impolicy=Medium_Widthonly&w=400&h=800');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            transition: all 1s;
+        }
+       
+        .upfilm1:hover{
+            cursor: pointer;
+            opacity: 0.8;
+            transform: scale(1.05);
+            box-shadow: 0 0 29px rgb(242, 178, 27);
+        }
+        .upfilm2:hover{
+            cursor: pointer;
+            opacity: 0.8;
+            transform: scale(1.05);
+            box-shadow: 0 0 29px rgb(242, 178, 27);
+        }
+        .upfilm3:hover{
+            cursor: pointer;
+            opacity: 0.8;
+            transform: scale(1.05);
+            box-shadow: 0 0 29px rgb(242, 178, 27)
+        }
+        .upfilm img{
+            border-radius: 10px;
+            margin: 0px;
+            width: 250px;
+            height:380px ;
+        }
+        hr{
+            color: #000000;
+        }
+        .snacks{
+            height: 500px;
+            margin: 0px;
+            background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/fbe41851146383.58e40be69d701.jpg');
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: cover;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 490px;
+        }
+        .container p{
+            text-shadow: 0 0 29px rgb(242, 178, 27);
+            padding: 0px;
+            margin-top: 280px;
+            margin-left: 20px;
+            font-size:2.4rem ;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        .but3 button{
+            padding: 5px;
+            margin-left:50px ;
+            margin-top: 20px;
+            border-radius: 20px;
+            color:rgb(243, 168, 29) ;
+            background-color: rgb(255, 255, 255);
+            opacity: 0.9;
+            border: none;
+            width: 200px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+            font-size: 14px;
+            transition: all 1.3s;
+        }
+        .but3 button:hover{
+            cursor: pointer;
+            color:goldenrod;
+            background-color: rgb(0, 0, 0);
+            opacity: 0.8;
+            transform:scale(1.1);
+        }
+        .formatsection{
+            margin-top: 0px;
+            border: 2px solid black;
+            height: 800px;
+            background-image: url('https://media.istockphoto.com/id/609708620/photo/twinkling-golden-glitter-falling-on-flat-surface-lit-by-spotlight.webp?b=1&s=170667a&w=0&k=20&c=nWxUoVmW-gxWgKsfjJAtHv2DoOhOYKDMaUP2wxhPn-k=');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .formatheading{
+            color:goldenrod;
+            text-shadow: 0px 0px 5px #fff9f9;
+            margin-top: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: xx-large;
+        }
+        .imax{
+            margin: 23px auto;
+            width: 990px;
+            height: 210px;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            background-image: url('https://cdn.celluloidjunkie.com/wp-content/uploads/2022/11/14055131/imax.jpeg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            box-shadow: 0 0 29px rgb(240, 237, 230);
+        }
+        .dx{
+            margin: 23px auto;
+            width: 990px;
+            height: 210px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://cdn.celluloidjunkie.com/wp-content/uploads/2020/02/26125232/4DX-ScreenX.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border: 1px solid goldenrod;
+            box-shadow: 0 0 29px rgb(240, 237, 230);
+        }
+        .ice{
+            margin: 23px auto;
+            width: 990px;
+            height: 210px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://www.boxofficepro.com/wp-content/uploads/2022/04/VisuelImmersif_Plane_ICE-scaled.jpg');
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: cover;
+            border: 1px solid white;
+            box-shadow: 0 0 29px rgb(240, 237, 230);
+        }
+        .foot{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0px auto;
+            color: rgb(198, 144, 7);
+            background-image: url('https://media.istockphoto.com/id/1392788496/vector/abstract-defocused-black-background-with-gold-particles.jpg?s=612x612&w=0&k=20&c=LeGNK7yzLup-MFXskhiUhpxdTlo5QjTvxveWETHr6Y8=');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .foot h2{
+            margin-right: 380px;
+            font-size:3rem ;
+            text-shadow: 0px 0px 3px #fff9f9;
+        }
+        input[type=submit]{
+            cursor: pointer;
+            color:goldenrod;
+            background-color: rgb(0, 0, 0);
+            transform:scale(1.1);
+            margin: 13px;
+            border: none;
+            border-radius: 30px;
+            width: 100px;
+            padding: 5px;
+            border: 1px solid goldenrod;
+        }
+        input[type=reset]{
+            cursor: pointer;
+            color:goldenrod;
+            background-color: rgb(0, 0, 0);
+            transform:scale(1.1);
+            margin: 13px;
+            border: none;
+            border-radius: 30px;
+            width: 100px;
+            padding: 5px;
+            border: 1px solid goldenrod;
+        }
+        input[type= 'reset']:hover{
+            background-color: rgb(236, 198, 100);
+            color: white;
+            transition: all 2s;
+            
+        }
+        input[type= 'submit']:hover{
+            background-color: rgb(230, 174, 30);
+            color: white;
+            transition: all 2s;
+        }
+        .foot form{
+            margin-right: 140px;
+            padding: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: large;
+        }
+        input{
+            background-color: rgb(227, 195, 113);
+            border-radius: 30px;
+            transition: all 2s;
+            border: NONE;
+        }
+           
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">Offers</a></li>
+                <div class="search">
+                    <input type="text" name="Search" placeholder="Search films">
+                </div>
+            </li>
+            </ul>
+        </div>
+    </header>
+    <div class="home">
+        <div class="homeheading">
+            <h1>Welcome to Roxies, for the love of cinema </h1>
+        </div>
+        <div class="homepara">
+            <p>The Roxie Theater, also known as the Roxie Cinema or just The Roxie, is a historic movie theater, founded in 1912.It is a non-profit community arthouse cinema.</p>
+        </div>
+        <div class="but">
+            <div class="but1">
+                <button type="button">Sign Up</button>
+            </div>
+            <div class="but2">
+                <button type="button">Login</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="now">
+        <div class="nowheading">
+            <h1>Now Showing</h1>
+        </div>
+        <div class="film">
+            <div class="film1">
+            </div>
+            <div class="film2">
+            </div>
+            <div class="film3">
+            </div>
+            <div class="film4">
+            </div>
+        </div>
+        <div class="filmnames">
+            <ul>
+                <li><a href="#">90%&nbsp;&nbsp;(U/A)</a></li>
+                <li><a href="#">88% &nbsp;&nbsp;(U/A)</a></li>
+                <li><a href="#">83%&nbsp;&nbsp;(U/A)</a></li>
+                <li><a href="#">33% &nbsp;&nbsp;(U/A)</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="snacks">
+        <div class="container">
+            <p>Check out our delcious snacks, beverages and a lot more!</p>
+        </div>
+        <div class="but3">
+            <button type="button">Check Prices</button>
+        </div>
+    </div>
+    </div>
+    <hr>
+    <div class="upcoming">
+        <div class="upheading">
+            <h1> Upcoming films Showreel</h1>
+        </div>
+        <div class="upfilm">
+            <div class="upfilm1"><a target="_blank" href="https://www.youtube.com/watch?v=KySsZCy587g"><img src="https://www.cinejosh.com/newsimg/newsmainimg/latest-poster-of-salman-tiger-3_b_1110230855.jpg" alt=""></a></div>
+            <div class="upfilm2"><a target="_blank" href="https://www.youtube.com/watch?v=Dydmpfo68DA"><img src="https://m.media-amazon.com/images/M/MV5BNWU5ZDRmMWItZGU0NC00NzZjLTgzYjctY2RlMzI3OTNkN2U5XkEyXkFqcGdeQXVyMTE0MTY2Mzk2._V1_.jpg" alt=""></a></div>
+            <div class="upfilm3"><a target="_blank" href="https://www.youtube.com/watch?v=aNxd01VzJsw"><img src="https://static.india.com/wp-content/uploads/2023/10/Untitled-7-2.jpg?impolicy=Medium_Widthonly&w=400&h=800" alt=""></a></div>
+        </div>
+    </div>
+    <hr>
+    <div class="formatsection">
+        <div class="formatheading">
+            <h1>Experience it in</h1>
+        </div>
+        <div class="imax"></div>
+        <div class="dx"></div>
+        <div class="ice"></div>
+    </div>
+    <hr>
+    <div class="foot">
+        <div>
+            <h2>Join us:</h2>
+        </div>
+        <form action="backend.php">
+            <div>
+                Email: <input type="email" name="myEmail">
+            </div>
+    
+            <br>
+            <div>
+                DOB: <input type="date" name="myDate">
+            </div>
+            <br>
+            <div>
+                Contact number: <input type="number" name="myBonus">
+            </div>
+            <br>
+            <div>
+                Gender: Male <input type="radio" name="myGender"> Female <input type="radio" name="myGender">
+                Other <input type="radio" name="myGender">
+            </div>
+    
+            <br>
+            <div>
+                <input type="submit" value="Submit Now">
+                <input type="reset" value="Reset Now">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+               
+        
+
+
